@@ -8,6 +8,7 @@ import { ProductComponent } from '../../components/product/product.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { Personaje } from '../../models/pokemons/personajes.model';
 import { PersonajeComponent } from '../../components/personaje/personaje.component';
+import { PaginatorComponent } from '../../components/paginator/paginator.component';
 
 @Component({
   selector: 'app-welcome-page',
@@ -18,7 +19,8 @@ import { PersonajeComponent } from '../../components/personaje/personaje.compone
     NavbarComponent,
     ProductComponent,
     MatGridListModule,
-    PersonajeComponent
+    PersonajeComponent,
+    PaginatorComponent
   ],
   templateUrl: './welcome-page.component.html',
   styleUrl: './welcome-page.component.css',
