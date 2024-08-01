@@ -55,14 +55,17 @@ export class LoginComponent implements OnInit {
       return;
     }
 
+    // devuelve al usuario en caso de encontrarlo
     let user = this.peoples.find(
       user => user.email === usrInput?.value && user.password === passInput?.value
     );
-
+    //comprueba que la variable user no este vacia, en caso de ser undefined hace otra cosa
     if (user) {
+      console.log(user);
       console.log('Login successful');
-      window.location.href = '/welcome';
+     window.location.href = '/welcome';
     } else {
+      console.log(user);
       alert('Invalid credentials');
     }
   }
