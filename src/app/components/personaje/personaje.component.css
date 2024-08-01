@@ -1,5 +1,6 @@
 .example-card {
-    max-width: 1000px;
+    max-width: 450px;
+    max-height: 900px;
     background-color: white;
   }
   
