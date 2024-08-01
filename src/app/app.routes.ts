@@ -6,5 +6,5 @@ export const routes: Routes = [
     {path: 'welcome', loadComponent:()=>import('./pages/welcome-page/welcome-page.component'),},
     {path: 'crud', loadComponent:()=>import('./pages/crud-page/crud-page.component'),},
     {path: 'crudAdd', loadComponent:()=>import('./pages/crud-add-page/crud-add-page.component'),},
-    {path: '', redirectTo: 'login', pathMatch: 'full'},
+    {path: '', redirectTo: 'welcome', pathMatch: 'full'},
 ];
