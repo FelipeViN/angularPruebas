@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 530px;
+    background-color: white;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  mat-card-title, mat-card-subtitle, p {
+    color: black;
+
+  }
+  button {
+    background-color: blueviolet;
+  }
+  .card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  

@@ -1,0 +1,179 @@
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Filter" #input>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Heroname</mat-label>
+  <input id="idHeroname" matInput placeholder="Heroname" #inputHeroname>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Hero Image</mat-label>
+  <input id="idHeroImg" matInput placeholder="Hero Image" #inputHeroImg>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Name</mat-label>
+  <input id="idName" matInput placeholder="Name" #inputName>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Role</mat-label>
+  <input id="idRole" matInput placeholder="Role" #inputRole>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Description</mat-label>
+  <input id="idDescription" matInput placeholder="Description" #inputDescription>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Primary Attack</mat-label>
+  <input id="idPrimaryAttack" matInput placeholder="Primary Attack" #inputPrimaryAttack>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Primary Attack Image</mat-label>
+  <input id="idPAImg" matInput placeholder="Primary Attack Image" #inputPAImg>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Secondary Attack</mat-label>
+  <input id="idSecondaryAttack" matInput placeholder="Secondary Attack" #inputSecondaryAttack>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Secondary Attack Image</mat-label>
+  <input id="idSAImg" matInput placeholder="Secondary Attack Image" #inputSAImg>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ability 1</mat-label>
+  <input id="idAbility1" matInput placeholder="Ability 1" #inputAbility1>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ability 1 Image</mat-label>
+  <input id="idA1Img" matInput placeholder="Ability 1 Image" #inputA1Img>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ability 2</mat-label>
+  <input id="idAbility2" matInput placeholder="Ability 2" #inputAbility2>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ability 2 Image</mat-label>
+  <input id="idA2Img" matInput placeholder="Ability 2 Image" #inputA2Img>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ability 3</mat-label>
+  <input id="idAbility3" matInput placeholder="Ability 3" #inputAbility3>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ability 3 Image</mat-label>
+  <input id="idA3Img" matInput placeholder="Ability 3 Image" #inputA3Img>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ultimate Ability</mat-label>
+  <input id="idUltimateAbility" matInput placeholder="Ultimate Ability" #inputUltimateAbility>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ultimate Ability Image</mat-label>
+  <input id="idA4Img" matInput placeholder="Ultimate Ability Image" #inputA4Img>
+</mat-form-field>
+
+<button mat-button style="background-color: black;" (click)="updatePersonaje()">Update</button>
+<button mat-button style="background-color: black;" (click)="addPersonaje()">Add</button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="heroname">
+    <th mat-header-cell *matHeaderCellDef>Heroname</th>
+    <td mat-cell *matCellDef="let element">{{element.heroname}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="hero_img">
+    <th mat-header-cell *matHeaderCellDef>Hero Image</th>
+    <td mat-cell *matCellDef="let element"><img [src]="element.hero_img" width="50"></td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="role">
+    <th mat-header-cell *matHeaderCellDef>Role</th>
+    <td mat-cell *matCellDef="let element">{{element.role}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let element">{{element.description}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="primaryAtack">
+    <th mat-header-cell *matHeaderCellDef>Primary Attack</th>
+    <td mat-cell *matCellDef="let element">{{element.primaryAtack}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="pA_img">
+    <th mat-header-cell *matHeaderCellDef>Primary Attack Image</th>
+    <td mat-cell *matCellDef="let element"><img [src]="element.pA_img" width="50"></td>
+  </ng-container>
+
+  <ng-container matColumnDef="secondaryAtack">
+    <th mat-header-cell *matHeaderCellDef>Secondary Attack</th>
+    <td mat-cell *matCellDef="let element">{{element.secondaryAtack}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="sA_img">
+    <th mat-header-cell *matHeaderCellDef>Secondary Attack Image</th>
+    <td mat-cell *matCellDef="let element"><img [src]="element.sA_img" width="50"></td>
+  </ng-container>
+
+  <ng-container matColumnDef="Ability_1">
+    <th mat-header-cell *matHeaderCellDef>Ability 1</th>
+    <td mat-cell *matCellDef="let element">{{element.Ability_1}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="a1_img">
+    <th mat-header-cell *matHeaderCellDef>Ability 1 Image</th>
+    <td mat-cell *matCellDef="let element"><img [src]="element.a1_img" width="50"></td>
+  </ng-container>
+
+  <ng-container matColumnDef="Ability_2">
+    <th mat-header-cell *matHeaderCellDef>Ability 2</th>
+    <td mat-cell *matCellDef="let element">{{element.Ability_2}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="a2_img">
+    <th mat-header-cell *matHeaderCellDef>Ability 2 Image</th>
+    <td mat-cell *matCellDef="let element"><img [src]="element.a2_img" width="50"></td>
+  </ng-container>
+
+  <ng-container matColumnDef="Ability_3">
+    <th mat-header-cell *matHeaderCellDef>Ability 3</th>
+    <td mat-cell *matCellDef="let element">{{element.Ability_3}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="a3_img">
+    <th mat-header-cell *matHeaderCellDef>Ability 3 Image</th>
+    <td mat-cell *matCellDef="let element"><img [src]="element.a3_img" width="50"></td>
+  </ng-container>
+
+  <ng-container matColumnDef="UltimateAbility">
+    <th mat-header-cell *matHeaderCellDef>Ultimate Ability</th>
+    <td mat-cell *matCellDef="let element">{{element.UltimateAbility}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="a4_img">
+    <th mat-header-cell *matHeaderCellDef>Ultimate Ability Image</th>
+    <td mat-cell *matCellDef="let element"><img [src]="element.a4_img" width="50"></td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="selectPersonaje(element)" style="background-color: purple;">Select</button>
+      <button mat-button color="warn" style="background-color: purple;" (click)="deletePersonaje(element)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="6">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>

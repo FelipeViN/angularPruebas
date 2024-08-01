@@ -1,0 +1,13 @@
+mat-grid-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  app-product {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  

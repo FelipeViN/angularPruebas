@@ -1,0 +1,28 @@
+
+<!-- <ng-container *ngIf="product">
+    <h2>{{ product.title }}</h2>
+    <p> $ {{ product.price }}</p>
+    <img [src]="product.image" width="640" height="480">
+</ng-container> -->
+<div class="card-wrapper"> 
+    <ng-container *ngIf="product">
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header >
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{ product.title }}</mat-card-title>
+              <mat-card-subtitle> $ {{ product.price }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="product.image" width="480" height="260">
+            <mat-card-content>
+              <p>{{ product.description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <!-- <button mat-button>LIKE</button> -->
+              <button mat-button>BUY</button>
+            </mat-card-actions>
+          </mat-card>
+    </ng-container>
+    <ng-container *ngIf="!product">
+        producto no renderizado
+    </ng-container>
+</div>

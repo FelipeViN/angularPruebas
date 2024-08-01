@@ -1,0 +1,12 @@
+.prTi, .prDe {
+    color: violet;
+}
+.prPr, .prCa {
+    color: magenta;
+}
+.prIm, .prAc{
+    color: darkorchid;
+}
+table, mat-form-field {
+    margin: 25px;
+}

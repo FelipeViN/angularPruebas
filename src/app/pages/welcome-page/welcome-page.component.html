@@ -1,0 +1,6 @@
+<app-navbar></app-navbar>
+<mat-grid-list cols="3" rowHeight="1:1.5">
+  <mat-grid-tile *ngFor="let product of products">
+    <app-product [product]="product"></app-product>
+  </mat-grid-tile>
+</mat-grid-list>

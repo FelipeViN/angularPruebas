@@ -1,0 +1,33 @@
+<mat-card style="width: 600px; margin:10px;">
+    <h1 align="center">Add New Product</h1>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Title</mat-label>
+        <input matInput id="itemTitle" #title maxlength="256" placeholder="Example backpack..." />
+      </mat-form-field>
+    </form>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Price</mat-label>
+        <input matInput id="itemPrice" #price maxlength="256" placeholder="Example 500..." />
+      </mat-form-field>
+    </form>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <input matInput id="itemDescription" #description maxlength="256" placeholder="Example Black, waterproof..." />
+      </mat-form-field>
+    </form>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Category</mat-label>
+        <input matInput id="itemCategory" #category maxlength="256" placeholder="Example camping..." />
+      </mat-form-field>
+    </form>
+    <section>
+      <div class="example-button-row">
+        <button mat-flat-button (click)="productAdd(title.value, price.value, description.value, category.value)">Add</button>
+      </div>
+    </section>
+  </mat-card>
+  
